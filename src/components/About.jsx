@@ -9,11 +9,22 @@ const About = () => {
 
             </div>
 
-            <p className='text-xl mt-20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit provident, harum qui illum repellat voluptatibus, repellendus animi totam quidem sequi veritatis, voluptatum odio minus? Consequatur, reprehenderit non praesentium totam nesciunt natus inventore molestiae vero perferendis laboriosam cumque perspiciatis veritatis exercitationem facere optio voluptatem quis debitis cupiditate, eos ducimus iusto?</p>
+            <p className='text-xl mt-20'>Hello! I'm excited to combine my passion for problem-solving and creativity by developing efficient and user-friendly web applications. I'm an adaptable, and collaborative software engineer who loves the challenges of learning new development tools, editors, and programming languages to create unique and pleasurable user experiences. My passion for software engineering stems from the ability to problem solve and figure out an effective solution in a collaborative way.</p>
 
             <br />
             <p className='text-xl'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ratione officia sequi asperiores. Error quod sapiente eum cum libero nesciunt totam at, recusandae corrupti corporis saepe, fuga nobis ab nihil.
+            Programming Languages | Python 3, JavaScript ES6+, SQL, HTML5, CSS
+            <br />
+Front-End | DOM manipulation, WebSockets, React, React Hooks, Redux Toolkit
+<br />
+Back-End | Django 4, PostgreSQL, MongoDB, FastAPI, RabbitMQ
+<br />
+System Design | Microservices, Domain-driven design, Message passing, Event sourcing
+<br />
+Developer Tools | Git, Docker, Insomnia
+
+<br />
+I look forward to hearing from you!
 
             </p>
         </div>

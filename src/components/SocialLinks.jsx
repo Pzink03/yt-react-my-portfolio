@@ -12,16 +12,16 @@ const SocialLinks = () => {
                 <>
                 LinkedIn <FaLinkedin size={30} /></>
             ),
-            href: 'https://linkedin.com',
+            href: 'https://www.linkedin.com/in/pete-zink-84199025b/',
             style: 'rounded-tr-md'
         },
         {
             id: 2,
             child: (
                 <>
-                LinkedIn <FaGithub size={30} /></>
+                GitLab <FaGithub size={30} /></>
             ),
-            href: 'https://github.com',
+            href: 'https://gitlab.com/PZink03',
 
         },
         {
