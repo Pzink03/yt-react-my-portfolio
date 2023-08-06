@@ -14,17 +14,7 @@ const About = () => {
             <br />
             <p className='text-xl'>
             Programming Languages | Python 3, JavaScript ES6+, SQL, HTML5, CSS
-            <br />
-Front-End | DOM manipulation, WebSockets, React, React Hooks, Redux Toolkit
-<br />
-Back-End | Django 4, PostgreSQL, MongoDB, FastAPI, RabbitMQ
-<br />
-System Design | Microservices, Domain-driven design, Message passing, Event sourcing
-<br />
-Developer Tools | Git, Docker, Insomnia
 
-<br />
-I look forward to hearing from you!
 
             </p>
         </div>
