@@ -5,12 +5,12 @@ import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
 import python from "../assets/Python.png"
 import mongoDB from "../assets/MongoDB.png"
-import github from "../assets/github.png"
-import tailwind from "../assets/tailwind.png"
+// import github from "../assets/github.png"
+// import tailwind from "../assets/tailwind.png"
 import postgresql from "../assets/postgresql.png"
 import django from "../assets/Django.png"
-import docker from "../assets/Docker.png"
-import bootstrap from "../assets/Bootstrap.png"
+// import docker from "../assets/Docker.png"
+// import bootstrap from "../assets/Bootstrap.png"
 
 
 
