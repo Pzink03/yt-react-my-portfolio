@@ -65,34 +65,34 @@ const Experience = () => {
             title: 'Django',
             style: 'shadow-gray-400'
         },
-        {
-            id: 9,
-            src: bootstrap,
-            title: 'BootStrap',
-            style: 'shadow-purple-400'
-        },
-        {
-            id: 10,
-            src: tailwind,
-            title: 'Tailwind',
-            style: 'shadow-sky-500'
-        },
+        // {
+        //     id: 9,
+        //     src: bootstrap,
+        //     title: 'BootStrap',
+        //     style: 'shadow-purple-400'
+        // },
+        // {
+        //     id: 10,
+        //     src: tailwind,
+        //     title: 'Tailwind',
+        //     style: 'shadow-sky-500'
+        // },
 
 
-        {
-            id: 11,
-            src: github,
-            title: 'GitHub',
-            style: 'shadow-gray-400'
-        },
+        // {
+        //     id: 11,
+        //     src: github,
+        //     title: 'GitHub',
+        //     style: 'shadow-gray-400'
+        // },
 
 
-        {
-            id: 12,
-            src: docker,
-            title: 'Docker',
-            style: 'shadow-blue-400'
-        },
+        // {
+        //     id: 12,
+        //     src: docker,
+        //     title: 'Docker',
+        //     style: 'shadow-blue-400'
+        // },
 
     ]
 

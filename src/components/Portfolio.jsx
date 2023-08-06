@@ -24,18 +24,18 @@ const Portfolio = () => {
             id: 3,
             src: navbar
         },
-        {
-            id: 4,
-            src: reactSmooth
-        },
-        {
-            id: 5,
-            src: installNode
-        },
-        {
-            id: 6,
-            src: reactWeather
-        },
+        // {
+        //     id: 4,
+        //     src: reactSmooth
+        // },
+        // {
+        //     id: 5,
+        //     src: installNode
+        // },
+        // {
+        //     id: 6,
+        //     src: reactWeather
+        // },
     ]
   return (
     <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
