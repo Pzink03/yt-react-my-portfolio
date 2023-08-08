@@ -1,16 +1,10 @@
-import React from 'react'
-// import installNode from '../assets/portfolio/installNode.jpg'
-import navbar from '../assets/portfolio/navbar.jpg'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-// import reactWeather from '../assets/portfolio/reactWeather.jpg'
-// import reactSmooth from '../assets/portfolio/reactSmooth.jpg'
-import rentovation from '../assets/portfolio/Rentovation.png'
-
-
-
+import React, { useState } from 'react';
+import rentovation from '../assets/portfolio/Rentovation.png';
+import reactParallax from '../assets/portfolio/reactParallax.jpg';
+import navbar from '../assets/portfolio/navbar.jpg';
+import rent from '../assets/rent.mp4';
 
 const Portfolio = () => {
-
     const portfolios = [
         {
             id: 1,
@@ -24,47 +18,46 @@ const Portfolio = () => {
             id: 3,
             src: navbar
         },
-        // {
-        //     id: 4,
-        //     src: reactSmooth
-        // },
-        // {
-        //     id: 5,
-        //     src: installNode
-        // },
-        // {
-        //     id: 6,
-        //     src: reactWeather
-        // },
-    ]
-  return (
-    <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
-        <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Projects</p>
-                <p className='py-6'>Check out some of my work right here</p>
-            </div>
+    ];
 
+    const [videoVisible, setVideoVisible] = useState(false);
 
+    const handleVideoButtonClick = () => {
+        setVideoVisible(!videoVisible);
+    };
 
-
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-            {
-                portfolios.map(({id, src}) => (
-                <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                    <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
-                    <div className='flex items-center justify-center'>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
-                    </div>
+    return (
+        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
+            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
+                {/* ... */}
+                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+                    {portfolios.map(({ id, src }) => (
+                        <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
+                            <img src={src} alt='' className='rounded-md duration-200 hover:scale-105' />
+                            <div className='flex items-center justify-center'>
+                                <button
+                                    className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
+                                    onClick={handleVideoButtonClick}
+                                >
+                                    {videoVisible ? 'Hide Video' : 'Play Video'}
+                                </button>
+                                <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-
-              ))
-            }
+                {/* Video player */}
+                {videoVisible && (
+                    <div className='flex items-center justify-center'>
+                        <video controls autoPlay>
+                            <source src={rent} type='video/mp4' />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                )}
             </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default Portfolio
+export default Portfolio;
