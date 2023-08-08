@@ -11,3 +11,35 @@ font-family: 'Raleway', sans-serif;
 
   }
 }
+
+.portfolio-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* transform: translate(-50%, -50%); */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0; /* Hide by default */
+  transition: opacity 0.3s;
+  object-fit: fill;
+  overflow: auto;
+
+}
+
+/* Show the description on hover */
+.shadow-md:hover .portfolio-description {
+  opacity: 1;
+}
+
+.image-test {
+  height:40px;
+  width: 40px;
+  border-radius: .5rem;
+
+
+}

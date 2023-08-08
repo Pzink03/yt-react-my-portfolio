@@ -28,7 +28,7 @@ const Contact = () => {
                 <>
                 <HiOutlineMail size={30} /></>
             ),
-            href: 'mailto:foo@gmail.com',
+            href: 'mailto:pete.zink03@gmail.com',
 
         },
         {
@@ -58,8 +58,8 @@ const Contact = () => {
             <div className='flex justify-center items-center'>
                 <form action='https://getform.io/f/2eceabcf-879f-4922-b4a9-bcd8d4adfa8a' method='POST' className='flex flex-col w-full md:w-1/2'>
                     <input type='text' name='name' placeholder='Enter your name' className='p-2 mt-4 bg-transparent border-2 rounded-md text-white focus:outline-none hover:border-blue-400 hover:text-blue-400 hover:shadow-blue-400 transition duration-300' />
-                    <input type='text' name='email' placeholder='Enter your email' className=' my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none  hover:border-green-400 hover:text-green-400 hover:shadow-green-400 transition duration-300' />
-                    <textarea name='message' placeholder='Enter your message' rows="10" className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none hover:border-purple-400 hover:text-purple-400 hover:shadow-purple-400 transition duration-300'></textarea>
+                    <input type='text' name='email' placeholder='Enter your email' className=' my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none  hover:border-blue-400 hover:text-blue-400 hover:shadow-blue-400 transition duration-300' />
+                    <textarea name='message' placeholder='Enter your message' rows="10" className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none hover:border-blue-400 hover:text-blue-400 hover:shadow-blue-400 transition duration-300'></textarea>
                     <button className='text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>
                         Let's Talk
                     </button>
