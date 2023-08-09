@@ -5,12 +5,12 @@ import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
 import python from "../assets/Python.png"
 import mongoDB from "../assets/MongoDB.png"
-// import github from "../assets/github.png"
-// import tailwind from "../assets/tailwind.png"
+import github from "../assets/github.png"
+import tailwind from "../assets/tailwind.png"
 import postgresql from "../assets/postgresql.png"
 import django from "../assets/Django.png"
-// import docker from "../assets/Docker.png"
-// import bootstrap from "../assets/Bootstrap.png"
+import docker from "../assets/Docker.png"
+import bootstrap from "../assets/Bootstrap.png"
 
 
 
@@ -65,42 +65,42 @@ const Experience = () => {
             title: 'Django',
             style: 'shadow-gray-400'
         },
-        // {
-        //     id: 9,
-        //     src: bootstrap,
-        //     title: 'BootStrap',
-        //     style: 'shadow-purple-400'
-        // },
-        // {
-        //     id: 10,
-        //     src: tailwind,
-        //     title: 'Tailwind',
-        //     style: 'shadow-sky-500'
-        // },
+        {
+            id: 9,
+            src: bootstrap,
+            title: 'BootStrap',
+            style: 'shadow-purple-400'
+        },
+        {
+            id: 10,
+            src: tailwind,
+            title: 'Tailwind',
+            style: 'shadow-sky-500'
+        },
 
 
-        // {
-        //     id: 11,
-        //     src: github,
-        //     title: 'GitHub',
-        //     style: 'shadow-gray-400'
-        // },
+        {
+            id: 11,
+            src: github,
+            title: 'GitHub',
+            style: 'shadow-gray-400'
+        },
 
 
-        // {
-        //     id: 12,
-        //     src: docker,
-        //     title: 'Docker',
-        //     style: 'shadow-blue-400'
-        // },
+        {
+            id: 12,
+            src: docker,
+            title: 'Docker',
+            style: 'shadow-blue-400'
+        },
 
     ]
 
 
 
   return (
-    <div name='skills' className='bg-gradient-to-b from-gray-800 to-black w-full h-screen'>
-        <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white'>
+    <div name='skills' className='bg-gradient-to-b from-gray-800 to-black w-auto h-auto'>
+        <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-auto h-auto text-white'>
             <div>
                 <p className='text-4xl font-bold border-b-4 border-gray-500 p-2 inline'>Skills</p>
                 <p className='py-6'>These are the technologies I've worked with</p>

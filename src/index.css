@@ -12,6 +12,23 @@ font-family: 'Raleway', sans-serif;
   }
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+[data-tooltip] {
+  color: gainsboro;
+  position: relative;
+}
+
+[data-tooltip]:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+}
+
+
+
 .portfolio-description {
   position: absolute;
   top: 0;

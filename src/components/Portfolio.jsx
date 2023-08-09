@@ -9,12 +9,12 @@ import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
 import python from "../assets/Python.png"
-// import mongoDB from "../assets/MongoDB.png"
-// import github from "../assets/github.png"
+import github from "../assets/github.png"
 // import tailwind from "../assets/tailwind.png"
 import postgresql from "../assets/postgresql.png"
 import django from "../assets/Django.png"
 import bootstrap from "../assets/Bootstrap.png"
+import docker from "../assets/Docker.png"
 
 const Portfolio = () => {
     const portfolios = [
@@ -25,7 +25,8 @@ const Portfolio = () => {
             video: rent,
             description: "A property management app with user-specific interfaces, signups, property and appointment management. Using Python, PostgreSQL, React, and custom CSS",
             title: "Rent-ovation",
-            images: [javascript,reactImage, python, postgresql, css, html]
+            images: [javascript,reactImage, python, postgresql, css, html, github, docker],
+            tooltip: "testing"
         },
         {
             id: 2,
@@ -34,8 +35,9 @@ const Portfolio = () => {
             video: car,
             description: "An application that allows the user to track automobile inventory, book appointments, and record sales. Using Python, Django, React, JavaScript",
             title: "Car Link",
-            images: [javascript,reactImage, python, django,html, bootstrap],
-            style: 'shadow-green-400'
+            images: [javascript,reactImage, python, django,html, bootstrap ],
+            style: 'shadow-green-400',
+            tooltip: "testing2"
         },
         {
             id: 3,
@@ -43,7 +45,8 @@ const Portfolio = () => {
             href: "https://gitlab.com/PZink03/TaskMe",
             description: "Allows the user to create and manage tasks in a to-do list application. Using Python, Django, HTML5, CSS",
             title: "TaskMe",
-            images: [python, django, css, html]
+            images: [python, django, css, html, github],
+            tooltip: "testing3"
         },
     ];
 
@@ -64,8 +67,8 @@ const Portfolio = () => {
                 <p className='py-6'>Here are some of the projects I've created</p>
 
             </div>
-                <div className='grid md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, title, images, style }, index) => (
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 sm:px-0'>
+                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
@@ -80,12 +83,19 @@ const Portfolio = () => {
                         </header>
                             <img src={src} alt='' className='rounded-md duration-200' />
                             <div className='portfolio-description'>{description}</div>
-                            <p className='py-2 text-sm'>Stack used:</p>
+                            <p data-tooltip={tooltip} className='py-2 text-sm text-center'>Stack:</p>
                             <div className='flex justify-around '>
-                            {images.map((image) => (
-                                <img key={image} className={` shadow-md shadow-gray-400 image-test`} src={image} alt={`Stack ${image}`} />
-                            ))}
-                            </div>
+    {images.map((image) => (
+        <img
+            key={image}
+            data-tooltip={tooltip}
+            className={`shadow-md shadow-gray-400 image-test`}
+            src={image}
+            alt={`Stack ${image}`}
+            title={image.replace(/\.png$/, '')} // Remove ".png" from the image filename for the tooltip
+        />
+    ))}
+</div>
                             <div className='flex items-center justify-center'>
 
                                 <button
