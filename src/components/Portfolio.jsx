@@ -23,7 +23,7 @@ const Portfolio = () => {
             src: rentovation,
             href: "https://gitlab.com/PZink03/rent-ovation",
             video: rent,
-            description: "A property management app with user-specific interfaces, signups, property and appointment management. Using Python, PostgreSQL, React, and custom CSS",
+            description: "A property management app with user-specific interfaces, signups, property and appointment management.  Implemented JWT authentication to limit functionality for unauthenticated users.",
             title: "Rent-ovation",
             images: [javascript,reactImage, python, postgresql, css, html, github, docker],
             tooltip: "testing"
@@ -33,9 +33,9 @@ const Portfolio = () => {
             src: reactParallax,
             href: "https://gitlab.com/PZink03/Car-link",
             video: car,
-            description: "An application that allows the user to track automobile inventory, book appointments, and record sales. Using Python, Django, React, JavaScript",
+            description: "An application that allows the user to track automobile inventory, book appointments, and record sales. Leveraged Django ORM (Object Relational Mapping) for database operations and model relationships ",
             title: "Car Link",
-            images: [javascript,reactImage, python, django,html, bootstrap ],
+            images: [javascript,reactImage, python, django,html, bootstrap, github, docker ],
             style: 'shadow-green-400',
             tooltip: "testing2"
         },
@@ -43,7 +43,7 @@ const Portfolio = () => {
             id: 3,
             src: navbar,
             href: "https://gitlab.com/PZink03/TaskMe",
-            description: "Allows the user to create and manage tasks in a to-do list application. Using Python, Django, HTML5, CSS",
+            description: "Allows the user to create and manage tasks in a to-do list application. Developed a responsive UI using a Django database resulting in an application allowing users to manage different projects and tasks",
             title: "TaskMe",
             images: [python, django, css, html, github],
             tooltip: "testing3"
@@ -82,8 +82,8 @@ const Portfolio = () => {
                             </div> */}
                         </header>
                             <img src={src} alt='' className='rounded-md duration-200' />
-                            <div className='portfolio-description'>{description}</div>
-                            <p data-tooltip={tooltip} className='py-2 text-sm text-center'>Stack:</p>
+                            <div className='portfolio-description md:text-2xl '>{description}</div>
+                            <p data-tooltip={tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
     {images.map((image) => (
         <img
