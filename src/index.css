@@ -54,9 +54,72 @@ font-family: 'Raleway', sans-serif;
 }
 
 .image-test {
-  height:30px;
-  width: 30px;
+  height:40px;
+  width: 40px;
   border-radius: .5rem;
+}
 
+/* .m {
+  font-family: Source San Pro;
+} */
+
+
+.midd {
+  --_gap: 2rem;
+  /* display: flex; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.bott {
+  overflow: hidden;
+  padding: calc(var(--_gap) / 2);
+  position: relative;
+
+}
+
+.bott::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  translate: var(--_translate, 0);
+  scale: var(--_width, 0) 1;
+  transition: scale 300ms var(--_scale-delay, 0ms), translate 500ms var(--_translate-delay, 0ms);
+
+
+}
+
+
+  .bott:hover{
+    --_width: 1;
+  }
+@supports selector(:has(h1)) {
+  .bott:hover + li {
+    --_translate: -100%;
+    --_scale-delay: 300ms;
+    --_translate-delay: 200ms;
+  }
+
+
+  .bott:has(+ :hover) {
+    --_translate: 100%;
+    --_scale-delay: 300ms;
+    --_translate-delay: 200ms;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .image-test {
+    height:30px;
+    width: 30px;
+    border-radius: .5rem;
+  }
 
 }

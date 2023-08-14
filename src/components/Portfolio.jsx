@@ -23,30 +23,170 @@ const Portfolio = () => {
             src: rentovation,
             href: "https://gitlab.com/PZink03/rent-ovation",
             video: rent,
-            description: "A property management app with user-specific interfaces, signups, property and appointment management.  Implemented JWT authentication to limit functionality for unauthenticated users.",
+            description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
             title: "Rent-ovation",
-            images: [javascript,reactImage, python, postgresql, css, html, github, docker],
-            tooltip: "testing"
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: javascript,
+                    style: "shadow-yellow-400",
+                    tooltip: "Javascript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: reactImage,
+                    style: "shadow-blue-400",
+                    tooltip: "React"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: python,
+                    style: "shadow-yellow-400",
+                    tooltip: "Python"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: postgresql,
+                    style: "shadow-blue-400",
+                    tooltip: "PostgreSQL"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: css,
+                    style: "shadow-blue-400",
+                    tooltip: "CSS"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: html,
+                    style: "shadow-orange-400",
+                    tooltip: "HTML"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "Github"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: docker,
+                    style: "shadow-blue-400",
+                    tooltip: "Docker"
+                },
+
+
+
+
+            ],
+            style: 'shadow-blue-400',
+
         },
         {
             id: 2,
             src: reactParallax,
             href: "https://gitlab.com/PZink03/Car-link",
             video: car,
-            description: "An application that allows the user to track automobile inventory, book appointments, and record sales. Leveraged Django ORM (Object Relational Mapping) for database operations and model relationships ",
+            description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
             title: "Car Link",
-            images: [javascript,reactImage, python, django,html, bootstrap, github, docker ],
-            style: 'shadow-green-400',
-            tooltip: "testing2"
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: javascript,
+                    style: "shadow-yellow-400",
+                    tooltip: "JavaScript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: reactImage,
+                    style: "shadow-blue-400",
+                    tooltip: "React"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: python,
+                    style: "shadow-yellow-400",
+                    tooltip: "Python"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: postgresql,
+                    style: "shadow-blue-400",
+                    tooltip: "Postgresql"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: bootstrap,
+                    style: "shadow-purple-400",
+                    tooltip: "Bootstrap"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: html,
+                    style: "shadow-orange-400",
+                    tooltip: "HTML"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "Github"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: docker,
+                    style: "shadow-blue-400",
+                    tooltip: "Docker"
+                },
+
+
+
+
+            ],
+
         },
         {
             id: 3,
             src: navbar,
             href: "https://gitlab.com/PZink03/TaskMe",
-            description: "Allows the user to create and manage tasks in a to-do list application. Developed a responsive UI using a Django database resulting in an application allowing users to manage different projects and tasks",
+            description: "Enabling users to efficiently create and oversee tasks, the application employs a responsive UI built on a Django database. This allows users to seamlessly manage projects and associated tasks.",
             title: "TaskMe",
-            images: [python, django, css, html, github],
-            tooltip: "testing3"
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: python,
+                    style: "shadow-yellow-400",
+                    tooltip: "Python"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: django,
+                    style: "shadow-green-400",
+                    tooltip: "Django"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: css,
+                    style: "shadow-blue-400",
+                    tooltip: "CSS"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: html,
+                    style: "shadow-orange-400",
+                    tooltip: "HTML"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "Github"
+                },
+
+
+
+            ],
+
         },
     ];
 
@@ -60,9 +200,9 @@ const Portfolio = () => {
     };
 
     return (
-        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
-            <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
+        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen p-4'>
+            <div className='max-w-screen-lg pt-20 mx-auto flex flex-col justify-center w-full h-full'>
+            <div className='pb-8 pt-20'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Projects</p>
                 <p className='py-6'>Here are some of the projects I've created</p>
 
@@ -83,16 +223,17 @@ const Portfolio = () => {
                         </header>
                             <img src={src} alt='' className='rounded-md duration-200' />
                             <div className='portfolio-description md:text-2xl '>{description}</div>
-                            <p data-tooltip={tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
+                            <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
     {images.map((image) => (
         <img
-            key={image}
-            data-tooltip={tooltip}
-            className={`shadow-md shadow-gray-400 image-test`}
-            src={image}
-            alt={`Stack ${image}`}
-            title={image.replace(/\.png$/, '')} // Remove ".png" from the image filename for the tooltip
+            key={image.img}
+            data-tooltip={image.tooltip}
+            className={`shadow-md ${image.style} image-test`}
+            src={image.img}
+            alt={`Stack ${image.img}`}
+            title={image.tooltip}
+
         />
     ))}
 </div>
