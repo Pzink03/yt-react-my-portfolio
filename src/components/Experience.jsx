@@ -11,6 +11,8 @@ import postgresql from "../assets/postgresql.png"
 import django from "../assets/Django.png"
 import docker from "../assets/Docker.png"
 import bootstrap from "../assets/Bootstrap.png"
+import fastapi from "../assets/fastapi.png"
+import gitlab from "../assets/GitLabLogo.png"
 
 
 
@@ -21,7 +23,7 @@ const Experience = () => {
             id: 1,
             src: reactImage,
             title: 'React',
-            style: 'shadow-blue-500'
+            style: 'shadow-sky-300'
         },
         {
             id: 2,
@@ -51,7 +53,7 @@ const Experience = () => {
             id: 6,
             src: postgresql,
             title: 'PostgreSQL',
-            style: 'shadow-blue-400'
+            style: 'shadow-blue-500'
         },
         {
             id: 7,
@@ -63,19 +65,19 @@ const Experience = () => {
             id: 8,
             src: django,
             title: 'Django',
-            style: 'shadow-green-700'
+            style: 'shadow-green-600'
         },
         {
             id: 9,
             src: bootstrap,
             title: 'BootStrap',
-            style: 'shadow-purple-400'
+            style: 'shadow-purple-700'
         },
         {
             id: 10,
             src: tailwind,
             title: 'Tailwind',
-            style: 'shadow-sky-500'
+            style: 'shadow-sky-300'
         },
 
 
@@ -85,13 +87,25 @@ const Experience = () => {
             title: 'GitHub',
             style: 'shadow-gray-400'
         },
+        {
+            id: 12,
+            src: fastapi,
+            title: 'FastAPI',
+            style: 'shadow-teal-400'
+        },
 
 
         {
-            id: 12,
+            id: 13,
             src: docker,
             title: 'Docker',
             style: 'shadow-blue-400'
+        },
+        {
+            id: 14,
+            src: gitlab,
+            title: 'GitLab',
+            style: 'shadow-orange-400'
         },
 
     ]
@@ -103,7 +117,7 @@ const Experience = () => {
         <div className='max-w-screen-lg mx-auto pt-20 flex flex-col justify-center w-auto h-auto text-white'>
             <div className=''>
                 <p className='text-4xl font-bold border-b-4 border-gray-500 mt-6 inline'>Skills</p>
-                <p className='py-6'>These are the technologies I've worked with</p>
+                <p className='py-6 md:text-xl sm:text-md'>These are the technologies I've worked with</p>
             </div>
             <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
 

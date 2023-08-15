@@ -9,12 +9,15 @@ import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
 import python from "../assets/Python.png"
-import github from "../assets/github.png"
+// import github from "../assets/github.png"
 // import tailwind from "../assets/tailwind.png"
 import postgresql from "../assets/postgresql.png"
 import django from "../assets/Django.png"
 import bootstrap from "../assets/Bootstrap.png"
 import docker from "../assets/Docker.png"
+import fastapi from "../assets/fastapi.png"
+import gitlab from "../assets/GitLabLogo.png"
+
 
 const Portfolio = () => {
     const portfolios = [
@@ -35,7 +38,7 @@ const Portfolio = () => {
                 {
                     // img:[python, django, css, html, github],
                     img: reactImage,
-                    style: "shadow-blue-400",
+                    style: "shadow-sky-300",
                     tooltip: "React"
                 },
                 {
@@ -64,9 +67,9 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: github,
-                    style: "shadow-gray-400",
-                    tooltip: "Github"
+                    img: fastapi,
+                    style: "shadow-teal-400",
+                    tooltip: "FastAPI"
                 },
                 {
                     // img:[python, django, css, html, github],
@@ -99,7 +102,7 @@ const Portfolio = () => {
                 {
                     // img:[python, django, css, html, github],
                     img: reactImage,
-                    style: "shadow-blue-400",
+                    style: "shadow-sky-300",
                     tooltip: "React"
                 },
                 {
@@ -110,14 +113,14 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: postgresql,
-                    style: "shadow-blue-400",
-                    tooltip: "Postgresql"
+                    img: django,
+                    style: "shadow-green-600",
+                    tooltip: "Django"
                 },
                 {
                     // img:[python, django, css, html, github],
                     img: bootstrap,
-                    style: "shadow-purple-400",
+                    style: "shadow-purple-700",
                     tooltip: "Bootstrap"
                 },
                 {
@@ -128,9 +131,9 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: github,
-                    style: "shadow-gray-400",
-                    tooltip: "Github"
+                    img: gitlab,
+                    style: "shadow-orange-400",
+                    tooltip: "GitLab"
                 },
                 {
                     // img:[python, django, css, html, github],
@@ -161,7 +164,7 @@ const Portfolio = () => {
                 {
                     // img:[python, django, css, html, github],
                     img: django,
-                    style: "shadow-green-400",
+                    style: "shadow-green-600",
                     tooltip: "Django"
                 },
                 {
@@ -178,9 +181,9 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: github,
-                    style: "shadow-gray-400",
-                    tooltip: "Github"
+                    img: gitlab,
+                    style: "shadow-orange-400",
+                    tooltip: "GitLab"
                 },
 
 
@@ -204,7 +207,7 @@ const Portfolio = () => {
             <div className='max-w-screen-lg pt-20 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8 pt-20'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Projects</p>
-                <p className='py-6'>Here are some of the projects I've created</p>
+                <p className='py-6 md:text-xl sm:text-md'>Here are some of the projects I've created</p>
 
             </div>
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 sm:px-0'>

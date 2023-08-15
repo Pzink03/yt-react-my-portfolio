@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaLinkedin, FaGitlab } from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from "react-icons/bs"
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
             id: 2,
             child: (
                 <>
-                <FaGithub size={30} /></>
+                <FaGitlab size={30} /></>
             ),
             href: 'https://gitlab.com/PZink03',
 
@@ -48,7 +48,7 @@ const Contact = () => {
         <div className='flex flex-col pt-4 justify-center max-w-screen-lg mx-auto h-auto'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Contact</p>
-                <p className='py-6'>Submit the form below to get in touch with me, or click on one of the links below</p>
+                <p className='py-6 md:text-xl sm:text-md'>Submit the form below to get in touch with me, or click on one of the links below</p>
             </div>
             <div className=''>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaLinkedin, FaGitlab } from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from "react-icons/bs"
 
@@ -19,7 +19,7 @@ const SocialLinks = () => {
             id: 2,
             child: (
                 <>
-                GitLab <FaGithub size={30} /></>
+                GitLab <FaGitlab size={30} /></>
             ),
             href: 'https://gitlab.com/PZink03',
 

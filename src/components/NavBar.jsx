@@ -38,7 +38,7 @@ const NavBar = () => {
         <div className='topp'>
         <ul className='hidden md:flex midd'>
             {links.map(({id, link}) => (
-                <li key={id} className=' bott cursor-pointer capitalize font-medium text-gray-500'>
+                <li key={id} className=' bott cursor-pointer capitalize font-medium text-white hover:text-gray-300'>
                 <Link className='' to={link} smooth duration={500}>{link}</Link>
                 </li>
             ))}
