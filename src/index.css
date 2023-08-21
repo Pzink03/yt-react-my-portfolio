@@ -95,6 +95,10 @@ font-family: 'Raleway', sans-serif;
 
 }
 
+.section-title {
+  font-family: Futura;
+}
+
 
   .bott:hover{
     --_width: 1;

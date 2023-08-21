@@ -206,7 +206,7 @@ const Portfolio = () => {
         <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen p-4'>
             <div className='max-w-screen-lg pt-20 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='pb-8 pt-20'>
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Projects</p>
+                <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-500'>Projects</p>
                 <p className='py-6 md:text-xl sm:text-md'>Here are some of the projects I've created</p>
 
             </div>
@@ -225,7 +225,7 @@ const Portfolio = () => {
                             </div> */}
                         </header>
                             <img src={src} alt='' className='rounded-md duration-200' />
-                            <div className='portfolio-description md:text-2xl '>{description}</div>
+                            <div className='portfolio-description md:text-xl '>{description}</div>
                             <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
     {images.map((image) => (
