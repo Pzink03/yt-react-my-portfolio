@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import rentovation from '../assets/portfolio/Rentovation.png';
-import reactParallax from '../assets/portfolio/reactParallax.jpg';
+import carlink from '../assets/portfolio/Carlink.png'
+// import reactParallax from '../assets/portfolio/reactParallax.jpg';
 import navbar from '../assets/portfolio/navbar.jpg';
 import rent from '../assets/rent.mp4';
 import car from '../assets/car.mp4';
@@ -87,7 +88,7 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            src: reactParallax,
+            src: carlink,
             href: "https://gitlab.com/PZink03/Car-link",
             video: car,
             description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
@@ -224,7 +225,7 @@ const Portfolio = () => {
                             ))}
                             </div> */}
                         </header>
-                            <img src={src} alt='' className='rounded-md duration-200' />
+                            <img src={src} sizes={200} alt='' className='rounded-md duration-200' />
                             <div className='portfolio-description md:text-xl '>{description}</div>
                             <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
