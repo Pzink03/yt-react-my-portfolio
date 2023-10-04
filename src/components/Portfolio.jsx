@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import rentovation from '../assets/portfolio/Rentovation.png';
-import carlink from '../assets/portfolio/Carlink.png'
+import carlink from '../assets/portfolio/Carlink.jpg'
 // import reactParallax from '../assets/portfolio/reactParallax.jpg';
+import taskme from '../assets/portfolio/TaskMe.jpg'
 import navbar from '../assets/portfolio/navbar.jpg';
 import rent from '../assets/rent.mp4';
-import car from '../assets/car.mp4';
+import taskmevid from '../assets/taskme.mp4';
+// import car from '../assets/car.mp4';
 import html from "../assets/html.png"
 import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
@@ -90,7 +92,7 @@ const Portfolio = () => {
             id: 2,
             src: carlink,
             href: "https://gitlab.com/PZink03/Car-link",
-            video: car,
+            // video: car,
             description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
             title: "Car Link",
             images: [
@@ -151,8 +153,9 @@ const Portfolio = () => {
         },
         {
             id: 3,
-            src: navbar,
+            src: taskme,
             href: "https://gitlab.com/PZink03/TaskMe",
+            video: taskmevid,
             description: "Enabling users to efficiently create and oversee tasks, the application employs a responsive UI built on a Django database. This allows users to seamlessly manage projects and associated tasks.",
             title: "TaskMe",
             images: [
