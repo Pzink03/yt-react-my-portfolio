@@ -3,7 +3,7 @@ import rentovation from '../assets/portfolio/Rentovation.png';
 import carlink from '../assets/portfolio/Carlink.jpg'
 // import reactParallax from '../assets/portfolio/reactParallax.jpg';
 import taskme from '../assets/portfolio/TaskMe.jpg'
-import navbar from '../assets/portfolio/navbar.jpg';
+// import navbar from '../assets/portfolio/navbar.jpg';
 import rent from '../assets/rent.mp4';
 import taskmevid from '../assets/taskme.mp4';
 // import car from '../assets/car.mp4';
