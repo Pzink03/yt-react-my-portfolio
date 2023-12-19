@@ -1,33 +1,91 @@
 import React, { useState } from 'react';
 import rentovation from '../assets/portfolio/Rentovation.png';
 import carlink from '../assets/portfolio/Carlink.jpg'
-// import reactParallax from '../assets/portfolio/reactParallax.jpg';
+import gabhub from '../assets/portfolio/GabHub.JPG'
 import taskme from '../assets/portfolio/TaskMe.jpg'
-// import navbar from '../assets/portfolio/navbar.jpg';
 import rent from '../assets/rent.mp4';
 import taskmevid from '../assets/taskme.mp4';
 // import car from '../assets/car.mp4';
 import html from "../assets/html.png"
 import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
+import appwrite from "../assets/appwrite.png"
 import reactImage from "../assets/react.png"
 import python from "../assets/Python.png"
-// import github from "../assets/github.png"
-// import tailwind from "../assets/tailwind.png"
+import github from "../assets/github.png"
+import tailwind from "../assets/tailwind.png"
 import postgresql from "../assets/postgresql.png"
+import typescript from "../assets/Typescriptlogo.png"
 import django from "../assets/Django.png"
 import bootstrap from "../assets/Bootstrap.png"
 import docker from "../assets/Docker.png"
 import fastapi from "../assets/fastapi.png"
-import gitlab from "../assets/GitLabLogo.png"
+// import gitlab from "../assets/GitLabLogo.png"
 
 
 const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
+            src: gabhub,
+            href: "https://github.com/Pzink03/GabHub",
+            video: null,
+            website: "https://gabhub.netlify.app/",
+            description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
+            title: "GabHub",
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: javascript,
+                    style: "shadow-yellow-400",
+                    tooltip: "Javascript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: reactImage,
+                    style: "shadow-sky-300",
+                    tooltip: "React"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: typescript,
+                    style: "shadow-blue-400",
+                    tooltip: "TypeScript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: appwrite,
+                    style: "shadow-red-400",
+                    tooltip: "Appwrite"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: css,
+                    style: "shadow-blue-400",
+                    tooltip: "CSS"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: tailwind,
+                    style: "shadow-teal-400",
+                    tooltip: "FastAPI"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
+                },
+
+
+            ],
+            style: 'shadow-blue-400',
+
+        },
+        {
+            id: 2,
             src: rentovation,
-            href: "https://gitlab.com/PZink03/rent-ovation",
+            href: "https://github.com/Pzink03/Rent-ovation",
             video: rent,
             description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
             title: "Rent-ovation",
@@ -62,12 +120,7 @@ const Portfolio = () => {
                     style: "shadow-blue-400",
                     tooltip: "CSS"
                 },
-                {
-                    // img:[python, django, css, html, github],
-                    img: html,
-                    style: "shadow-orange-400",
-                    tooltip: "HTML"
-                },
+
                 {
                     // img:[python, django, css, html, github],
                     img: fastapi,
@@ -80,6 +133,12 @@ const Portfolio = () => {
                     style: "shadow-blue-400",
                     tooltip: "Docker"
                 },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
+                },
 
 
 
@@ -89,10 +148,10 @@ const Portfolio = () => {
 
         },
         {
-            id: 2,
+            id: 3,
             src: carlink,
-            href: "https://gitlab.com/PZink03/Car-link",
-            // video: car,
+            href: "https://github.com/Pzink03/Car-Link",
+            video: '',
             description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
             title: "Car Link",
             images: [
@@ -128,21 +187,21 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: html,
-                    style: "shadow-orange-400",
+                    img: css,
+                    style: "shadow-blue-400",
                     tooltip: "HTML"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: gitlab,
-                    style: "shadow-orange-400",
-                    tooltip: "GitLab"
                 },
                 {
                     // img:[python, django, css, html, github],
                     img: docker,
                     style: "shadow-blue-400",
                     tooltip: "Docker"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
                 },
 
 
@@ -152,9 +211,9 @@ const Portfolio = () => {
 
         },
         {
-            id: 3,
+            id: 4,
             src: taskme,
-            href: "https://gitlab.com/PZink03/TaskMe",
+            href: "https://github.com/Pzink03/TaskMe",
             video: taskmevid,
             description: "Enabling users to efficiently create and oversee tasks, the application employs a responsive UI built on a Django database. This allows users to seamlessly manage projects and associated tasks.",
             title: "TaskMe",
@@ -185,9 +244,9 @@ const Portfolio = () => {
                 },
                 {
                     // img:[python, django, css, html, github],
-                    img: gitlab,
-                    style: "shadow-orange-400",
-                    tooltip: "GitLab"
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
                 },
 
 
@@ -207,15 +266,15 @@ const Portfolio = () => {
     };
 
     return (
-        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen p-4'>
+        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full h-full text-white  p-4'>
             <div className='max-w-screen-lg pt-20 mx-auto flex flex-col justify-center w-full h-full'>
-            <div className='pb-8 pt-20'>
+            <div className='w-full h-full'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-500'>Projects</p>
                 <p className='py-6 md:text-xl sm:text-md'>Here are some of the projects I've created</p>
+                </div>
 
-            </div>
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style }, index) => (
+                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style, website }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
@@ -228,7 +287,9 @@ const Portfolio = () => {
                             ))}
                             </div> */}
                         </header>
-                            <img src={src} sizes={200} alt='' className='rounded-md duration-200' />
+                        <div className='h-80 w-full'>
+                            <img src={src} sizes={200} alt='' className='h-full w-full object-cover object-top rounded-md duration-200' />
+                        </div>
                             <div className='portfolio-description md:text-xl '>{description}</div>
                             <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
@@ -250,7 +311,8 @@ const Portfolio = () => {
                                     className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
                                     onClick={() => handleVideoButtonClick(index)}
                                 >
-                                    {videoVisibleArray[index] ? 'Hide Video' : 'Play Video'}
+                                    {video == null ? <a href={website}>Visit Site</a>: videoVisibleArray[index] ? 'Hide Video' : 'Play Video' }
+
                                 </button>
                                 <a href={href} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</a>
                             </div>

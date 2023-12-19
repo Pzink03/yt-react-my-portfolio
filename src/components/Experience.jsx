@@ -3,6 +3,7 @@ import html from "../assets/html.png"
 import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
+import appwrite from "../assets/appwrite.png"
 import python from "../assets/Python.png"
 import mongoDB from "../assets/MongoDB.png"
 import github from "../assets/github.png"
@@ -13,6 +14,7 @@ import docker from "../assets/Docker.png"
 import bootstrap from "../assets/Bootstrap.png"
 import fastapi from "../assets/fastapi.png"
 import gitlab from "../assets/GitLabLogo.png"
+import typescript from "../assets/Typescriptlogo.png"
 
 
 
@@ -27,54 +29,66 @@ const Experience = () => {
         },
         {
             id: 2,
-            src: html,
-            title: 'HTML',
-            style: 'shadow-orange-500'
-        },
-        {
-            id: 3,
-            src: javascript,
-            title: 'JavaScript',
-            style: 'shadow-yellow-500'
-        },
-        {
-            id: 4,
-            src: python,
-            title: 'Python',
-            style: 'shadow-yellow-500'
-        },
-        {
-            id: 5,
-            src: css,
-            title: 'CSS',
-            style: 'shadow-blue-500'
-        },
-        {
-            id: 6,
             src: postgresql,
             title: 'PostgreSQL',
             style: 'shadow-blue-500'
         },
         {
+            id: 3,
+            src: typescript,
+            title: 'TypeScript',
+            style: 'shadow-blue-400'
+        },
+        {
+            id: 4,
+            src: appwrite,
+            title: 'Appwrite',
+            style: 'shadow-red-400'
+        },
+        {
+            id: 5,
+            src: javascript,
+            title: 'JavaScript',
+            style: 'shadow-yellow-500'
+        },
+        {
+            id: 6,
+            src: python,
+            title: 'Python',
+            style: 'shadow-yellow-500'
+        },
+        {
             id: 7,
+            src: css,
+            title: 'CSS',
+            style: 'shadow-blue-500'
+        },
+        {
+            id: 8,
+            src: html,
+            title: 'HTML',
+            style: 'shadow-orange-500'
+        },
+        {
+            id: 9,
             src: mongoDB,
             title: 'MongoDB',
             style: 'shadow-green-400'
         },
         {
-            id: 8,
+            id: 10,
             src: django,
             title: 'Django',
             style: 'shadow-green-600'
         },
         {
-            id: 9,
+            id: 11,
             src: bootstrap,
             title: 'BootStrap',
             style: 'shadow-purple-700'
         },
         {
-            id: 10,
+            id: 12,
             src: tailwind,
             title: 'Tailwind',
             style: 'shadow-sky-300'
@@ -82,13 +96,7 @@ const Experience = () => {
 
 
         {
-            id: 11,
-            src: github,
-            title: 'GitHub',
-            style: 'shadow-gray-400'
-        },
-        {
-            id: 12,
+            id: 13,
             src: fastapi,
             title: 'FastAPI',
             style: 'shadow-teal-400'
@@ -96,13 +104,19 @@ const Experience = () => {
 
 
         {
-            id: 13,
+            id: 14,
             src: docker,
             title: 'Docker',
             style: 'shadow-blue-400'
         },
         {
-            id: 14,
+            id: 15,
+            src: github,
+            title: 'GitHub',
+            style: 'shadow-gray-400'
+        },
+        {
+            id: 16,
             src: gitlab,
             title: 'GitLab',
             style: 'shadow-orange-400'
