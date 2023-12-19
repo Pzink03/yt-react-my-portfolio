@@ -44,7 +44,7 @@ const Contact = () => {
         }
     ]
   return (
-    <div name='contact' className='w-auto h-auto bg-gradient-to-b from-black to-gray-800 p-4 text-white'>
+    <div name='contact' className='w-auto h-auto bg-gradient-to-t from-black to-gray-800 p-4 text-white'>
         <div className='flex flex-col pt-4 justify-center max-w-screen-lg mx-auto h-auto'>
             <div className='pb-8'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-500'>Contact</p>

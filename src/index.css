@@ -27,15 +27,17 @@ font-family: 'Raleway', sans-serif;
   top: 0;
 }
 
-
+.z {
+  z-index: 10;
+}
 
 .portfolio-description {
   position: absolute;
   top: 0;
   left: 0;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
   /* transform: translate(-50%, -50%); */
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -43,7 +45,9 @@ font-family: 'Raleway', sans-serif;
   border-radius: 5px;
   opacity: 0; /* Hide by default */
   transition: opacity 0.3s;
-  object-fit: fill;
+  object-fit: cover;
+  width: full;
+  height: 70%;
   overflow: auto;
 
 }

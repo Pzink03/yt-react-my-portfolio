@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import rentovation from '../assets/portfolio/Rentovation.png';
 import carlink from '../assets/portfolio/Carlink.jpg'
 import gabhub from '../assets/portfolio/GabHub.JPG'
+import jobBoard from '../assets/portfolio/Jobboard.JPG'
 import taskme from '../assets/portfolio/TaskMe.jpg'
 import rent from '../assets/rent.mp4';
 import taskmevid from '../assets/taskme.mp4';
@@ -27,12 +28,63 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
+            src: jobBoard,
+            href: "https://github.com/Pzink03/GabHub",
+            video: null,
+            website: "https://gabhub.netlify.app/",
+            description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
+            title: "Employment Puzzle",
+            subtitle: "Frontend Developer",
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: javascript,
+                    style: "shadow-yellow-400",
+                    tooltip: "Javascript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: reactImage,
+                    style: "shadow-sky-300",
+                    tooltip: "React"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: typescript,
+                    style: "shadow-blue-400",
+                    tooltip: "TypeScript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: css,
+                    style: "shadow-blue-400",
+                    tooltip: "CSS"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: tailwind,
+                    style: "shadow-teal-400",
+                    tooltip: "FastAPI"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
+                },
+            ],
+            style: 'shadow-blue-400',
+
+        },
+        {
+            id: 2,
             src: gabhub,
             href: "https://github.com/Pzink03/GabHub",
             video: null,
             website: "https://gabhub.netlify.app/",
             description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
             title: "GabHub",
+            subtitle: "Fullstack Developer",
             images: [
                 {
                     // img:[python, django, css, html, github],
@@ -83,12 +135,13 @@ const Portfolio = () => {
 
         },
         {
-            id: 2,
+            id: 3,
             src: rentovation,
             href: "https://github.com/Pzink03/Rent-ovation",
             video: rent,
             description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
             title: "Rent-ovation",
+            subtitle: "Fullstack Developer",
             images: [
                 {
                     // img:[python, django, css, html, github],
@@ -148,12 +201,13 @@ const Portfolio = () => {
 
         },
         {
-            id: 3,
+            id: 4,
             src: carlink,
             href: "https://github.com/Pzink03/Car-Link",
             video: '',
             description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
             title: "Car Link",
+            subtitle: "Fullstack Developer",
             images: [
                 {
                     // img:[python, django, css, html, github],
@@ -211,12 +265,13 @@ const Portfolio = () => {
 
         },
         {
-            id: 4,
+            id: 5,
             src: taskme,
             href: "https://github.com/Pzink03/TaskMe",
             video: taskmevid,
             description: "Enabling users to efficiently create and oversee tasks, the application employs a responsive UI built on a Django database. This allows users to seamlessly manage projects and associated tasks.",
             title: "TaskMe",
+            subtitle: "Fullstack Developer",
             images: [
                 {
                     // img:[python, django, css, html, github],
@@ -266,20 +321,23 @@ const Portfolio = () => {
     };
 
     return (
-        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full h-full text-white  p-4'>
+        <div name='projects' className='bg-gradient-to-b from-black to-gray-800 w-full h-full text-white p-4'>
             <div className='max-w-screen-lg pt-20 mx-auto flex flex-col justify-center w-full h-full'>
             <div className='w-full h-full'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-blue-500'>Projects</p>
                 <p className='py-6 md:text-xl sm:text-md'>Here are some of the projects I've created</p>
                 </div>
 
-                <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style, website }, index) => (
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 py-6 px-12 sm:px-0'>
+                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style, website, subtitle }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
                             <header className='font-bold text-2xl pb-4'>
-                            <h1 className='text-center pb-4'>{title}</h1>
+                            <h1 className='text-center pb-2'>{title}</h1>
+                            <p className='text-center text-sm text-gray-500 pb-4'>
+                                {subtitle}
+                            </p>
                             {/* <p className='pb-2 text-sm'>Stack used:</p>
                             <div className='flex'>
                             {images.map((image) => (
