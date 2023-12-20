@@ -16,7 +16,7 @@ const Clones = () => {
             href: "https://github.com/Pzink03/Youtube-clone",
             video: '',
             website: '',
-            description: "Feat ",
+            description: "Created a mock YouTube homepage as a personal project. Despite not utilizing any external APIs, the focus was on recreating the popular and complex YouTube interface. This project served as a fun creative challenge that tested my styling ability.",
             title: "Youtube's Homepage",
             subtitle: "aka peteTube",
             images: [

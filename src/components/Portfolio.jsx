@@ -6,6 +6,8 @@ import jobBoard from '../assets/portfolio/Jobboard.JPG'
 import taskme from '../assets/portfolio/TaskMe.jpg'
 import rent from '../assets/rent.mp4';
 import taskmevid from '../assets/taskme.mp4';
+import gabHubText from '../assets/portfolio/GabHubText.svg'
+import employmentPuzzle from '../assets/portfolio/EmploymentPuzzleText.svg'
 // import car from '../assets/car.mp4';
 import html from "../assets/html.png"
 import css from "../assets/css.png"
@@ -32,8 +34,15 @@ const Portfolio = () => {
             href: "https://github.com/Pzink03/GabHub",
             video: null,
             website: "https://gabhub.netlify.app/",
-            description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
-            title: "Employment Puzzle",
+            description: "While developing this already existing job board website I implemented front-end features to enhance overall functionality and user interface. Implementing custom React hooks I integrate context functionality, giving the application dynamic features such as a user-friendly dark mode. I also designed and integrated the use of Stripe payments, providing a solution for job listing renewals and facilitating updates to job statuses. Also, I introduced job listing filtering, hiding, and favoriting features, utilizing local storage to ensure persistent UI interactions.",
+            titles: [
+                {
+                    caption: "Employment Puzzle",
+                    img: employmentPuzzle,
+                    style: "text-purple-500"
+
+                }
+            ],
             subtitle: "Frontend Developer",
             images: [
                 {
@@ -82,8 +91,15 @@ const Portfolio = () => {
             href: "https://github.com/Pzink03/GabHub",
             video: null,
             website: "https://gabhub.netlify.app/",
-            description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
-            title: "GabHub",
+            description: "Developed a dynamic social media application where users can create, like, and save posts, fostering content sharing and user engagement. I decided to incorporate Appwrite for media storage, end-to-end backend server capabilities, easy to manage API creation, and increased authentication and security measures. This allowed me to execute comprehensive CRUD functionality, allowing users to manage their posts, liked content, saved posts, and additional multimedia within the application. For the styling I decided to use Tailwind as well as some custom CSS to handle certain Tailwind limitations. This allowed me to implement a fully responsive design.",
+            titles: [
+                {
+                    caption: '',
+                    img: gabHubText,
+                    style: ""
+
+                }
+            ],
             subtitle: "Fullstack Developer",
             images: [
                 {
@@ -140,7 +156,14 @@ const Portfolio = () => {
             href: "https://github.com/Pzink03/Rent-ovation",
             video: rent,
             description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
-            title: "Rent-ovation",
+            titles: [
+                {
+                    caption: "Rent-ovation",
+                    img: '',
+                    style: "jj"
+
+                }
+            ],
             subtitle: "Fullstack Developer",
             images: [
                 {
@@ -206,7 +229,14 @@ const Portfolio = () => {
             href: "https://github.com/Pzink03/Car-Link",
             video: '',
             description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
-            title: "Car Link",
+            titles: [
+                {
+                    caption: "Employment Puzzle",
+                    style: "text-purple-500",
+                    img: ''
+
+                }
+            ],
             subtitle: "Fullstack Developer",
             images: [
                 {
@@ -270,7 +300,14 @@ const Portfolio = () => {
             href: "https://github.com/Pzink03/TaskMe",
             video: taskmevid,
             description: "Enabling users to efficiently create and oversee tasks, the application employs a responsive UI built on a Django database. This allows users to seamlessly manage projects and associated tasks.",
-            title: "TaskMe",
+            titles: [
+                {
+                    caption: "Employment Puzzle",
+                    img: '',
+                    style: "text-purple-500"
+
+                }
+            ],
             subtitle: "Fullstack Developer",
             images: [
                 {
@@ -329,12 +366,27 @@ const Portfolio = () => {
                 </div>
 
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 py-6 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, title, images, tooltip, style, website, subtitle }, index) => (
+                    {portfolios.map(({ id, src, href, video, description, titles, images, tooltip, style, website, subtitle }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
-                            <header className='font-bold text-2xl pb-4'>
-                            <h1 className='text-center pb-2'>{title}</h1>
+                            <header className='font-bold flex justify-center flex-col text-2xl pb-4'>
+                            {titles.map((title) => (
+
+                                <div key={title.caption} className='flex flex-col justify-center gap-10'>
+                                    {title.img !== '' ? (
+                                    <img
+                                        className='object-cover '
+                                        src={title.img}
+                                        alt={title.caption}>
+                                    </img>
+
+                                    ): <p>{title.caption}</p>}
+                                </div>
+
+
+
+                            ))}
                             <p className='text-center text-sm text-gray-500 pb-4'>
                                 {subtitle}
                             </p>

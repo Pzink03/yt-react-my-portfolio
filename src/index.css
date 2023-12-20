@@ -30,7 +30,9 @@ font-family: 'Raleway', sans-serif;
 .z {
   z-index: 10;
 }
-
+.jj {
+  color:blue
+}
 .portfolio-description {
   position: absolute;
   top: 0;
