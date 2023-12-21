@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import peteTube from '../assets/portfolio/peteTube.JPG'
+import peteTubeText from '../assets/portfolio/PeteTubeText.svg'
 import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
@@ -17,8 +18,15 @@ const Clones = () => {
             video: '',
             website: '',
             description: "Created a mock YouTube homepage as a personal project. Despite not utilizing any external APIs, the focus was on recreating the popular and complex YouTube interface. This project served as a fun creative challenge that tested my styling ability.",
-            title: "Youtube's Homepage",
-            subtitle: "aka peteTube",
+            titles: [
+                {
+                    caption: "",
+                    img: peteTubeText,
+
+
+                }
+            ],
+            subtitle: "Youtube's Homepage",
             images: [
                 {
                     // img:[python, django, css, html, github],
@@ -83,12 +91,20 @@ const Clones = () => {
                 </div>
 
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 px-12 py-6 sm:px-0'>
-                    {websiteClones.map(({ id, src, href, video, description, title, images, tooltip, style, website, subtitle }, index) => (
-
-
+                    {websiteClones.map(({ id, src, href, video, description, titles, images, tooltip, style, website, subtitle }, index) => (
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
                             <header className='font-bold text-2xl pb-4'>
-                            <h1 className='text-center pt-2'>{title}</h1>
+                            {titles.map((title) => (
+                            <div key={title.caption} className={`flex flex-col justify-center gap-10 ${title.style}`}>
+                                {title.img !== '' ? (
+                                <img
+                                    className='object-cover '
+                                    src={title.img}
+                                    alt={title.caption}>
+                                </img>
+                                ): <p>{title.caption}</p>}
+                            </div>
+                            ))}
                             <p className='text-center text-lg text-gray-500'>{subtitle}</p>
                             {/* <p className='pb-2 text-sm'>Stack used:</p>
                             <div className='flex'>

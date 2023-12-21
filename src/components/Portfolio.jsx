@@ -7,7 +7,10 @@ import taskme from '../assets/portfolio/TaskMe.jpg'
 import rent from '../assets/rent.mp4';
 import taskmevid from '../assets/taskme.mp4';
 import gabHubText from '../assets/portfolio/GabHubText.svg'
+import taskMeText from '../assets/portfolio/TaskMeText.svg'
 import employmentPuzzle from '../assets/portfolio/EmploymentPuzzleText.svg'
+import rentovationText from '../assets/portfolio/RentovationText.svg'
+import carLink from '../assets/portfolio/CarLinkText.svg'
 // import car from '../assets/car.mp4';
 import html from "../assets/html.png"
 import css from "../assets/css.png"
@@ -39,7 +42,6 @@ const Portfolio = () => {
                 {
                     caption: "Employment Puzzle",
                     img: employmentPuzzle,
-                    style: "text-purple-500"
 
                 }
             ],
@@ -96,7 +98,6 @@ const Portfolio = () => {
                 {
                     caption: '',
                     img: gabHubText,
-                    style: ""
 
                 }
             ],
@@ -158,9 +159,9 @@ const Portfolio = () => {
             description: "Featuring personalized interfaces for users, enabling signups, property and appointment management, all supported by custom CSS. JWT authentication has been implemented to restrict functionality for unauthenticated users",
             titles: [
                 {
-                    caption: "Rent-ovation",
-                    img: '',
-                    style: "jj"
+                    caption: "",
+                    img: rentovationText,
+                    style: ""
 
                 }
             ],
@@ -232,8 +233,8 @@ const Portfolio = () => {
             titles: [
                 {
                     caption: "Employment Puzzle",
-                    style: "text-purple-500",
-                    img: ''
+
+                    img: carLink
 
                 }
             ],
@@ -303,8 +304,8 @@ const Portfolio = () => {
             titles: [
                 {
                     caption: "Employment Puzzle",
-                    img: '',
-                    style: "text-purple-500"
+                    img: taskMeText,
+
 
                 }
             ],
@@ -370,10 +371,11 @@ const Portfolio = () => {
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
-                            <header className='font-bold flex justify-center flex-col text-2xl pb-4'>
+                            <header className='font-bold flex bg-none justify-center flex-col text-2xl pb-4'>
                             {titles.map((title) => (
 
-                                <div key={title.caption} className='flex flex-col justify-center gap-10'>
+                                <div key={title.caption} className={`flex flex-col justify-center gap-10 ${title.style}`}>
+
                                     {title.img !== '' ? (
                                     <img
                                         className='object-cover '
