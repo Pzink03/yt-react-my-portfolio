@@ -33,66 +33,10 @@ const Portfolio = () => {
     const portfolios = [
         {
             id: 1,
-            src: jobBoard,
-            href: "https://github.com/Pzink03/GabHub",
-            video: null,
-            website: "https://gabhub.netlify.app/",
-            description: "While developing this already existing job board website I implemented front-end features to enhance overall functionality and user interface. Implementing custom React hooks I integrate context functionality, giving the application dynamic features such as a user-friendly dark mode. I also designed and integrated the use of Stripe payments, providing a solution for job listing renewals and facilitating updates to job statuses. Also, I introduced job listing filtering, hiding, and favoriting features, utilizing local storage to ensure persistent UI interactions.",
-            titles: [
-                {
-                    caption: "Employment Puzzle",
-                    img: employmentPuzzle,
-
-                }
-            ],
-            subtitle: "Frontend Developer",
-            images: [
-                {
-                    // img:[python, django, css, html, github],
-                    img: javascript,
-                    style: "shadow-yellow-400",
-                    tooltip: "Javascript"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: reactImage,
-                    style: "shadow-sky-300",
-                    tooltip: "React"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: typescript,
-                    style: "shadow-blue-400",
-                    tooltip: "TypeScript"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: css,
-                    style: "shadow-blue-400",
-                    tooltip: "CSS"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: tailwind,
-                    style: "shadow-teal-400",
-                    tooltip: "FastAPI"
-                },
-                {
-                    // img:[python, django, css, html, github],
-                    img: github,
-                    style: "shadow-gray-400",
-                    tooltip: "GitHub"
-                },
-            ],
-            style: 'shadow-blue-400',
-
-        },
-        {
-            id: 2,
             src: gabhub,
             href: "https://github.com/Pzink03/GabHub",
             video: null,
-            website: "https://gabhub.netlify.app/",
+            website: "https://gabhub.netlify.app",
             description: "Developed a dynamic social media application where users can create, like, and save posts, fostering content sharing and user engagement. I decided to incorporate Appwrite for media storage, end-to-end backend server capabilities, easy to manage API creation, and increased authentication and security measures. This allowed me to execute comprehensive CRUD functionality, allowing users to manage their posts, liked content, saved posts, and additional multimedia within the application. For the styling I decided to use Tailwind as well as some custom CSS to handle certain Tailwind limitations. This allowed me to implement a fully responsive design.",
             titles: [
                 {
@@ -147,6 +91,63 @@ const Portfolio = () => {
                 },
 
 
+            ],
+            style: 'shadow-blue-400',
+
+        },
+        {
+            id: 2,
+            src: jobBoard,
+            href: "https://github.com/Pzink03/Employment-Puzzle",
+            video: null,
+            website: "https://employmentpuzzle.netlify.app",
+            description: "While developing this already existing job board website I implemented front-end features to enhance overall functionality and user interface. Implementing custom React hooks I integrate context functionality, giving the application dynamic features such as a user-friendly dark mode. I also designed and integrated the use of Stripe payments, providing a solution for job listing renewals and facilitating updates to job statuses. Also, I introduced job listing filtering, hiding, and favoriting features, utilizing local storage to ensure persistent UI interactions.",
+            note: " Currently working on authentication when the app is deployed. For feature videos, please check out my LinkedIn, or feel free to clone the project and test it in a local environment. Thanks!",
+            titles: [
+                {
+                    caption: "Employment Puzzle",
+                    img: employmentPuzzle,
+
+                }
+            ],
+            subtitle: "Frontend Developer",
+            images: [
+                {
+                    // img:[python, django, css, html, github],
+                    img: javascript,
+                    style: "shadow-yellow-400",
+                    tooltip: "Javascript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: reactImage,
+                    style: "shadow-sky-300",
+                    tooltip: "React"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: typescript,
+                    style: "shadow-blue-400",
+                    tooltip: "TypeScript"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: css,
+                    style: "shadow-blue-400",
+                    tooltip: "CSS"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: tailwind,
+                    style: "shadow-teal-400",
+                    tooltip: "FastAPI"
+                },
+                {
+                    // img:[python, django, css, html, github],
+                    img: github,
+                    style: "shadow-gray-400",
+                    tooltip: "GitHub"
+                },
             ],
             style: 'shadow-blue-400',
 
@@ -367,7 +368,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 py-6 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, titles, images, tooltip, style, website, subtitle }, index) => (
+                    {portfolios.map(({ id, src, href, video, description, note, titles, images, tooltip, style, website, subtitle }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
@@ -402,7 +403,15 @@ const Portfolio = () => {
                         <div className='h-80 w-full'>
                             <img src={src} sizes={200} alt='' className='h-full w-full object-cover object-top rounded-md duration-200' />
                         </div>
-                            <div className='portfolio-description md:text-xl '>{description}</div>
+                            <div className='portfolio-description flex flex-col md:text-xl overflow-y-hidden'>{description}
+                            {note != null && (
+
+                            <p className='pt-2 overflow-hidden'>
+                                <span className='text-red-700 font-bold'>Note:</span>
+                                {note}
+                            </p>
+                            )}
+                            </div>
                             <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
     {images.map((image) => (
@@ -423,19 +432,25 @@ const Portfolio = () => {
                                     className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
                                     onClick={() => handleVideoButtonClick(index)}
                                 >
-                                    {video == null ? <a href={website}>Visit Site</a>: videoVisibleArray[index] ? 'Hide Video' : 'Play Video' }
+                                    {video == null ? <a href={website}>Visit Site</a> : videoVisibleArray[index] ? 'Hide Video' : 'Play Video' }
 
                                 </button>
                                 <a href={href} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</a>
                             </div>
-                            {videoVisibleArray[index] && (
-                                <div className='flex items-center justify-center'>
-                                    <video controls autoPlay>
-                                        <source src={video} type='video/mp4' />
-                                        Your browser does not support the video tag.
-                                    </video>
-                                </div>
-                            )}
+                            {video == null ?
+
+                            null
+
+                             : (videoVisibleArray[index] && (
+
+                                 <div className='flex items-center justify-center'>
+                                     <video controls autoPlay>
+                                         <source src={video} type='video/mp4' />
+                                         Your browser does not support the video tag.
+                                     </video>
+                                 </div>
+                             ))
+                        }
                         </div>
                     ))}
                 </div>
