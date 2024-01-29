@@ -7,6 +7,7 @@ import reactImage from "../assets/react.png"
 import github from "../assets/github.png"
 import tailwind from "../assets/tailwind.png"
 import typescript from "../assets/Typescriptlogo.png"
+import peteTubeVid from '../assets/PeteTube.mp4';
 
 
 const Clones = () => {
@@ -15,7 +16,7 @@ const Clones = () => {
             id: 1,
             src: peteTube,
             href: "https://github.com/Pzink03/Youtube-clone",
-            video: '',
+            video: peteTubeVid,
             website: '',
             description: "Created a mock YouTube homepage as a personal project. Despite not utilizing any external APIs, the focus was on recreating the popular and complex YouTube interface. This project served as a fun creative challenge that tested my styling ability.",
             titles: [
@@ -114,9 +115,9 @@ const Clones = () => {
                             </div> */}
                         </header>
                         <div className='h-80 w-full'>
-                            <img src={src} alt='' className='h-full w-full object-cover object-left rounded-md duration-200' />
+                            <img src={src} alt='' className='h-full w-full object-cover object-top rounded-md duration-200' />
                         </div>
-                            <div className='portfolio-description md:text-xl '>{description}</div>
+                            <div className='clone-description md:text-xl '>{description}</div>
                             <p data-tooltip={images.tooltip} className='py-4 text-md font-bold text-center'>Stack:</p>
                             <div className='flex justify-around '>
     {images.map((image) => (
@@ -144,7 +145,7 @@ const Clones = () => {
                             </div>
                             {videoVisibleArray[index] && (
                                 <div className='flex items-center justify-center'>
-                                    <video controls autoPlay>
+                                    <video className="" controls autoPlay>
                                         <source src={video} type='video/mp4' />
                                         Your browser does not support the video tag.
                                     </video>

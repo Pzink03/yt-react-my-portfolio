@@ -11,6 +11,7 @@ import taskMeText from '../assets/portfolio/TaskMeText.svg'
 import employmentPuzzle from '../assets/portfolio/EmploymentPuzzleText.svg'
 import rentovationText from '../assets/portfolio/RentovationText.svg'
 import carLink from '../assets/portfolio/CarLinkText.svg'
+import carLinkVid from '../assets/CarLink.mp4'
 // import car from '../assets/car.mp4';
 import html from "../assets/html.png"
 import css from "../assets/css.png"
@@ -229,8 +230,8 @@ const Portfolio = () => {
             id: 4,
             src: carlink,
             href: "https://github.com/Pzink03/Car-Link",
-            video: '',
-            description: "The application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
+            video: carLinkVid,
+            description: "This application facilitates automobile inventory tracking, appointment booking, and sales recording. It optimizes database operations and model relationships through Django's ORM (Object Relational Mapping) framework.",
             titles: [
                 {
                     caption: "Employment Puzzle",
@@ -368,7 +369,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 gap-8 py-6 px-12 sm:px-0'>
-                    {portfolios.map(({ id, src, href, video, description, note, titles, images, tooltip, style, website, subtitle }, index) => (
+                    {portfolios.map(({ id, src, href, video, description, note, titles, images, website, subtitle }, index) => (
 
 
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg relative'>
@@ -403,10 +404,10 @@ const Portfolio = () => {
                         <div className='h-80 w-full'>
                             <img src={src} sizes={200} alt='' className='h-full w-full object-cover object-top rounded-md duration-200' />
                         </div>
-                            <div className='portfolio-description flex flex-col md:text-xl overflow-y-hidden'>{description}
+                            <div className='portfolio-description object-top flex flex-col md:text-xl md:overflow-hidden overflow-auto'>{description}
                             {note != null && (
 
-                            <p className='pt-2 overflow-hidden'>
+                            <p className='pt-2'>
                                 <span className='text-red-700 font-bold'>Note:</span>
                                 {note}
                             </p>
@@ -441,15 +442,15 @@ const Portfolio = () => {
 
                             null
 
-                             : (videoVisibleArray[index] && (
+                            : (videoVisibleArray[index] && (
 
-                                 <div className='flex items-center justify-center'>
-                                     <video controls autoPlay>
-                                         <source src={video} type='video/mp4' />
-                                         Your browser does not support the video tag.
-                                     </video>
-                                 </div>
-                             ))
+                                <div className='flex items-center justify-center'>
+                                    <video controls autoPlay>
+                                        <source src={video} type='video/mp4' />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            ))
                         }
                         </div>
                     ))}
