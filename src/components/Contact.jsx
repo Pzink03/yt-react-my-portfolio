@@ -70,10 +70,8 @@ const Contact = () => {
                 <a className='flex justify-between items-center text-white' href={href} download={download} target='_blank' rel="noreferrer">  {child}</a>
             </li>
             ))}
-        </ul>
+                </ul>
                 </form>
-
-
             </div>
         </div>
     </div>

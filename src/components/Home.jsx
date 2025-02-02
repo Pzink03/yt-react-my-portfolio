@@ -12,27 +12,17 @@ const Home = () => {
             <div className='flex flex-col justify-center h-full'>
                 <h2 className='text-4xl mt-20 pt-10 font-bold text-blue-500 border-b-4 border-gray-500 pr-4 section-title'>
                 Hi!  <Typewriter text=" I'm Pete Zink" delay={300} />
-
-
                 </h2>
-
                 <p className='text-white py-4 max-w-md '>
                 <Typewriter text="I'm a Fullstack Engineer specializing in frontend development, with expertise in React, JavaScript, Python, CSS and other frameworks. Adept at creating captivating user interfaces that seamlessly integrate interactivity and design. I'm a collaborative team player committed to delivering exceptional web experiences that merge innovation with functionality. Check out some of my projects below!" delay={25} />
-
-
-
-
-
-
                 </p>
-                <div className='flex '>
+                <div className='flex'>
                     <Link to='projects' smooth duration={500} className=' mr-4 group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                         Projects
                         <span className='group-hover:rotate-90 duration-300'>
-                        <MdKeyboardArrowRight size={25} className='ml-1' />
+                        <MdKeyboardArrowRight size={26} className='ml-1' />
                         </span>
                     </Link>
-
                     <Link to='contact' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
                         Contact
                         <span className='group-hover:rotate-90 duration-300'>
