@@ -30,11 +30,11 @@ export const BackgroundCircles = ({ parallaxRef }) => {
     return (
       <div className="absolute -top-[42.375rem] left-1/2 w-[78rem] aspect-square border border-gray-900 rounded-full -translate-x-1/2 md:-top-[38.5rem] xl:-top-[2rem]">
         <Rings />
-        <MouseParallax strength={0.07} parallaxContainerRef={parallaxRef}>
-          <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[36deg] ">
+        <MouseParallax strength={0.02} parallaxContainerRef={parallaxRef}>
+          <div className="absolute bottom-1/2 left-1/2 w-0.25 h-1/2 origin-bottom rotate-[36deg]">
             <img
             src={javascript}
-            className="w-12 h-12 rounded-lg -rotate-[36deg]"
+            className="w-12 h-12 rounded-lg -rotate-[36deg] "
             alt="javascript"
             />
           </div>

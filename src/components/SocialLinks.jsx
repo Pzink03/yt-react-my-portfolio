@@ -3,48 +3,48 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from "react-icons/bs"
 
+export const links = [
+    {
+        id: 1,
+        child: (
+            <>
+             <FaLinkedin size={40} /></>
+        ),
+        href: 'https://www.linkedin.com/in/pete-zink-84199025b/',
+        style: 'rounded-tr-md'
+    },
+    {
+        id: 2,
+        child: (
+            <>
+             <FaGithub size={40} /></>
+        ),
+        href: 'https://github.com/PZink03',
+
+    },
+    {
+        id: 3,
+        child: (
+            <>
+             <HiOutlineMail size={40} /></>
+        ),
+        href: 'mailto:pete.zink03@gmail.com',
+
+    },
+    {
+        id: 4,
+        child: (
+            <>
+             <BsFillPersonLinesFill size={40} /></>
+        ),
+        href: '/myresume.pdf',
+        style: "rounded-br-md",
+        download: true,
+
+    }
+]
 const SocialLinks = () => {
 
-    const links = [
-        {
-            id: 1,
-            child: (
-                <>
-                LinkedIn <FaLinkedin size={30} /></>
-            ),
-            href: 'https://www.linkedin.com/in/pete-zink-84199025b/',
-            style: 'rounded-tr-md'
-        },
-        {
-            id: 2,
-            child: (
-                <>
-                GitHub <FaGithub size={30} /></>
-            ),
-            href: 'https://github.com/PZink03',
-
-        },
-        {
-            id: 3,
-            child: (
-                <>
-                Mail <HiOutlineMail size={30} /></>
-            ),
-            href: 'mailto:pete.zink03@gmail.com',
-
-        },
-        {
-            id: 4,
-            child: (
-                <>
-                Resume <BsFillPersonLinesFill size={30} /></>
-            ),
-            href: '/myresume.pdf',
-            style: "rounded-br-md",
-            download: true,
-
-        }
-    ]
 
 
 

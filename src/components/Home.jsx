@@ -4,6 +4,7 @@ import {MdKeyboardArrowRight} from 'react-icons/md'
 import {Link} from 'react-scroll'
 import Typewriter from "./Typewrite.jsx";
 import { BackgroundCircles } from './BackgroundCircles.jsx';
+import { links } from './SocialLinks.jsx'
 
 
 const Home = () => {
@@ -13,14 +14,16 @@ const Home = () => {
     <div name="home" className='h-screen w-full bg-gradient-to-b  from-black via-black to-gray-800 relative' ref={parallaxRef}>
         <div className='max-w-screen-lg mx-auto flex flex-col items-center z-10  justify-center h-full px-4 relative'>
             <div className='flex flex-col justify-center h-full relative '>
-                        <h2 className='text-4xl text-center mt-20 pt-10 font-bold text-blue-500 border-b-4 border-gray-500 section-title'>
-                        Hi!  <Typewriter text=" I'm Pete Zink" delay={300} />
+                        <h2 className='font-jetbrains text-4xl text-center font-bold text-white section-title'>
+                        Hello I'm
+                        <br/>
+                        <p className='text-6xl text-blue-500 font-jetbrains'>Pete Zink</p>
                         </h2>
             <div className='flex w-full h-1/2 mt-'>
-                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full mt-12 object-cover md:p-10 mt-10' />
+                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full object-cover md:p-10 mt-10' />
             </div>
                     <div className='max-w-xl'>
-                        <p className='text-white py-4'>
+                        <p className='text-white/80 py-4'>
                         <Typewriter text="I'm a Fullstack Engineer specializing in frontend development, with expertise in React, JavaScript, Python, CSS and other frameworks. Adept at creating captivating user interfaces that seamlessly integrate interactivity and design. I'm a collaborative team player committed to delivering exceptional web experiences that merge innovation with functionality. Check out some of my projects below!" delay={25} />
                         </p>
                         <div className='flex items-center justify-center'>
@@ -38,6 +41,15 @@ const Home = () => {
                             </Link>
 
                         </div>
+                        <ul className="hidden absolute -left-[20.5rem] bottom-[30.5rem] gap-2 px-4 py-1 bg-gray-700 backdrop-blur border border-gray-800 rounded-2xl xl:flex">
+                                    {links.map((icon, index) => (
+                                        <a className="flex items-center  justify-center w-14 h-12 rounded-full transition-colors hover:bg-gray-500 text-white" target="_blank" rel='noreferrer' key={icon.id} href={icon.href}>
+                                            <div>
+                                            {icon.child}
+                                            </div>
+                                        </a>
+                                    ))}
+                                    </ul>
 
                     </div>
 
