@@ -12,15 +12,15 @@ const Home = () => {
 
   return (
     <div name="home" className='h-screen w-full bg-gradient-to-b  from-black via-black to-gray-800 relative' ref={parallaxRef}>
-        <div className='max-w-screen-lg mx-auto flex flex-col items-center z-10  justify-center h-full px-4 relative'>
+        <div className='max-w-screen-lg mx-auto flex flex-col items-center z-1 justify-center h-full px-4 relative'>
             <div className='flex flex-col justify-center h-full relative '>
                         <h2 className='font-jetbrains text-4xl text-center font-bold text-white section-title'>
                         Hello I'm
                         <br/>
                         <p className='text-6xl text-blue-500 font-jetbrains'>Pete Zink</p>
                         </h2>
-            <div className='flex w-full h-1/2 mt-'>
-                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full object-cover md:p-10 mt-10' />
+            <div className='flex w-full mt-2'>
+                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full h-[36rem] object-cover md:p-10 mt-2' />
             </div>
                     <div className='max-w-xl'>
                         <p className='text-white/80 py-4'>
