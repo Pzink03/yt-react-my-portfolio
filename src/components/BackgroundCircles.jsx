@@ -34,42 +34,42 @@ export const BackgroundCircles = ({ parallaxRef }) => {
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom rotate-[36deg]">
             <img
             src={javascript}
-            className="w-12 h-12 rounded-lg -rotate-[36deg] "
+            className="w-8 h-8 rounded-full -rotate-[36deg] "
             alt="javascript"
             />
           </div>
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom -rotate-[36deg]">
             <img
             src={typescript}
-            className="w-12 h-12 rounded-lg mt-2 rotate-[36deg]"
+            className="w-8 h-8 rounded-full mt-2 rotate-[36deg]"
             alt="typescript"
             />
           </div>
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom -rotate-[65deg]">
             <img
             src={react}
-            className="w-12 h-12 rounded-lg"
+            className="w-8 h-8 rounded-lg"
             alt="react"
             />
           </div>
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom -rotate-[95deg]">
             <img
             src={tailwind}
-            className="w-12 h-12 rounded-lg rotate-[75deg]"
+            className="w-8 h-8 rounded-full rotate-[75deg]"
             alt="tailwind"
             />
           </div>
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom rotate-[70deg]">
             <img
             src={css}
-            className="w-12 h-12 rounded-lg mt-6 mr-24 -rotate-[70deg]"
+            className="w-8 h-8 rounded-full mt-6 mr-24 -rotate-[70deg]"
             alt="css"
             />
           </div>
           <div className="absolute bottom-1/2 left-1/2 w-14 h-1/2 origin-bottom rotate-[95deg]">
             <img
             src={html}
-            className="w-12 h-12 rounded-lg mt-10 mr-24 -rotate-[95deg]"
+            className="w-8 h-8 rounded-full mt-10 mr-24 -rotate-[95deg]"
             alt="html"
             />
           </div>

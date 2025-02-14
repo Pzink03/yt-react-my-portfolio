@@ -14,6 +14,9 @@ module.exports = {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          softBlue: "#199E8F",
+          mutedTeal: "#5FCDC9",
+          deepGreen: "#145A32",
         },
         stroke: {
           1: "#26242C",
@@ -64,7 +67,7 @@ module.exports = {
       backgroundImage: {
         "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
         "conic-gradient":
-          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+          "conic-gradient(from 225deg, #ffffff, #87CEFA, #4682B4, #1E90FF, #0000FF, #ffffff);",
       },
     },
   },

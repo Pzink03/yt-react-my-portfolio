@@ -17,24 +17,18 @@ const Home = () => {
                         <h2 className='font-jetbrains text-4xl text-center font-bold text-white section-title'>
                         Hello I'm
                         <br/>
-                        <p className='text-6xl text-blue-500 font-jetbrains'>Pete Zink</p>
+                        <p className='text-6xl text-color-softBlue font-jetbrains'>Pete Zink</p>
                         </h2>
             <div className='flex w-full mt-2'>
-                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full h-[36rem] object-cover md:p-10 mt-2' />
+                <img src={HeroImage} alt='my profile' className='md:rounded-full rounded-xl w-full h-[36rem] object-cover md:p-20 mt-2' />
             </div>
-                    <div className='max-w-xl'>
-                        <p className='text-white/80 py-4'>
-                        <Typewriter text="I'm a Fullstack Engineer specializing in frontend development, with expertise in React, JavaScript, Python, CSS and other frameworks. Adept at creating captivating user interfaces that seamlessly integrate interactivity and design. I'm a collaborative team player committed to delivering exceptional web experiences that merge innovation with functionality. Check out some of my projects below!" delay={25} />
+                    <div className='max-w-xl flex flex-col items-center justify-center w-'>
+                        <p className='text-white/80 '>
+                        <Typewriter text="I'm a software engineer specializing in building and designing exceptional web applications" delay={25} />
                         </p>
-                        <div className='flex items-center justify-center'>
-                            <Link to='projects' smooth duration={500} className=' mr-4 group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
-                                Projects
-                                <span className='group-hover:rotate-90 duration-300'>
-                                <MdKeyboardArrowRight size={26} className='ml-1' />
-                                </span>
-                            </Link>
-                            <Link to='contact' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
-                                Contact
+                        <div className=''>
+                            <Link to='contact' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-full border-2 border-color-softBlue cursor-pointer'>
+                                Let's work together
                                 <span className='group-hover:rotate-90 duration-300'>
                                 <MdKeyboardArrowRight size={25} className='ml-1' />
                                 </span>
