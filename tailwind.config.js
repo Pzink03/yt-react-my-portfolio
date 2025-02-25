@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         signature: ["Great Vibes"],
+        jetbrains: ["JetBrains Mono", "monospace"],
       },
       colors: {
         color: {

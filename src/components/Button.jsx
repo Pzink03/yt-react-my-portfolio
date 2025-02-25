@@ -1,29 +1,7 @@
-import ButtonSvg from "./ButtonSvg"
-
-
-export function Button({className, href, onClick, children, px, white}) {
-    const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-softBlue hover:border-white ${px || 'px-7'} ${white ? 'text-n-8' : 'text-n-1'} ${className || ""}`
-    const spanClasses = 'relative z-10'
-
-    const renderButton = () => (
-        <button className={classes} onClick={onClick}>
-            <span className={spanClasses}>
-                {children}
-            </span>
-            {ButtonSvg(white)}
-        </button>
-    )
-
-    const renderLink = () => (
-        <a href={href} className={classes}>
-            <span className={spanClasses}>
-                {children}
-            </span>
-            {ButtonSvg(white)}
-        </a>
-    )
-
-    return href
-    ? renderLink()
-    : renderButton()
+export function Button({className, children, onClick}){
+    <button className='text-color-softBlue w-fit  hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out hover:text-white md:px-10 px-4 md:py-3 py-2 my-2 flex items-center rounded-lg border-2 border-color-softBlue cursor-pointer'
+        onClick={() => (onClick)}
+        >
+        {children}
+    </button>
 }

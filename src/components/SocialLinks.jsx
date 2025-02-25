@@ -1,68 +1,19 @@
-import React from 'react'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from "react-icons/bs"
+import { links } from "../constants";
 
-export const links = [
-    {
-        id: 1,
-        child: (
-            <>
-             <FaLinkedin size={40} /></>
-        ),
-        href: 'https://www.linkedin.com/in/pete-zink-84199025b/',
-        style: 'rounded-tr-md'
-    },
-    {
-        id: 2,
-        child: (
-            <>
-             <FaGithub size={40} /></>
-        ),
-        href: 'https://github.com/PZink03',
-
-    },
-    {
-        id: 3,
-        child: (
-            <>
-             <HiOutlineMail size={40} /></>
-        ),
-        href: 'mailto:pete.zink03@gmail.com',
-
-    },
-    {
-        id: 4,
-        child: (
-            <>
-             <BsFillPersonLinesFill size={40} /></>
-        ),
-        href: '/myresume.pdf',
-        style: "rounded-br-md",
-        download: true,
-
-    }
-]
-const SocialLinks = () => {
-
-
-
-
-  return (
-    <div className=' hidden lg:flex flex-col top-[35%] left-0 fixed'>
-        <ul>
-
-
-            {links.map (({id, child, href, style, download}) => (
-                // eslint-disable-next-line
-            <li key={id} className={ "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded:md duration-300 bg-gray-500" + " " + style }>
-                <a className='flex justify-between items-center w-full text-white' href={href} download={download} target='_blank' rel="noreferrer">  {child}</a>
-            </li>
+export function SocialLinks() {
+    return(
+        <ul className="gap-4 pb-2 rounded-2xl flex">
+            {links.map((icon, index) => (
+                <a
+                className="flex items-center p-1.5 justify-center md:w-12 md:h-12 w-8 h-8 rounded-full social-icons border-2 border-color-softBlue hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out text-color-softBlue hover:text-white"
+                target="_blank"
+                rel="noreferrer"
+                key={icon.id}
+                href={icon.href}
+                >
+                    {icon.child}
+                </a>
             ))}
         </ul>
-
-    </div>
-  )
+    )
 }
-
-export default SocialLinks
