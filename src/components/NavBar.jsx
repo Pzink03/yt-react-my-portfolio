@@ -1,33 +1,35 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-scroll";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import { navLinks } from "../constants";
-
-
+import React, { useState } from "react"
+import { FaBars, FaTimes } from "react-icons/fa"
+import { Link } from "react-scroll"
+import { disablePageScroll, enablePageScroll } from "scroll-lock"
+import { navLinks } from "../constants"
 
 const NavBar = () => {
   const [openNavigation, setOpenNavigation] = useState(false)
 
-    const toggleNavigation = () => {
-        if (openNavigation) {
-            setOpenNavigation(false)
-            enablePageScroll()
-        } else {
-            setOpenNavigation(true)
-            disablePageScroll()
-        }
+  const toggleNavigation = () => {
+    if (openNavigation) {
+      setOpenNavigation(false)
+      enablePageScroll()
+    } else {
+      setOpenNavigation(true)
+      disablePageScroll()
     }
+  }
 
-    const handleClick = () => {
-        if (!openNavigation) return
+  const handleClick = () => {
+    if (!openNavigation) return
 
-        enablePageScroll()
-        setOpenNavigation(false)
-    }
+    enablePageScroll()
+    setOpenNavigation(false)
+  }
 
   return (
-    <div className={`flex fixed w-full z-20 justify-between lg:justify-normal items-center h-20 text-white border-b border-n-6 font-jetbrains bg-black lg:backdrop-blur-sm px-4 ${openNavigation ? "bg-n-8" : "bg-black backdrop-blur-sm"}`}>
+    <div
+      className={`flex fixed w-full z-20 justify-between lg:justify-normal items-center h-20 text-white border-b border-n-6 font-jetbrains bg-black lg:backdrop-blur-sm px-4 ${
+        openNavigation ? "bg-n-8" : "bg-black backdrop-blur-sm"
+      }`}
+    >
       <div className="flex items-center">
         <h1 className="text-5xl font-signature ml-2">Pete Zink</h1>
       </div>
@@ -45,7 +47,12 @@ const NavBar = () => {
           ))}
         </ul>
       </div>
-      <button className="hidden lg:flex text-color-softBlue w-fit  hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out hover:text-white md:px-6 px-2 md:py-2 py-2 my-2 items-center rounded-lg border-2 border-color-softBlue cursor-pointer"href="#contact">Contact Me</button>
+      <button
+        className="hidden lg:flex text-color-softBlue w-fit  hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out hover:text-white md:px-6 px-2 md:py-2 py-2 my-2 items-center rounded-lg border-2 border-color-softBlue cursor-pointer"
+        href="#contact"
+      >
+        Contact Me
+      </button>
       <div
         onClick={toggleNavigation}
         className="cursor-pointer pr-4 z-40 text-gray-500 lg:hidden"
@@ -59,12 +66,7 @@ const NavBar = () => {
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl font-"
             >
-              <Link
-                onClick={handleClick}
-                to={link}
-                smooth
-                duration={500}
-              >
+              <Link onClick={handleClick} to={link} smooth duration={500}>
                 {link}
               </Link>
             </li>
@@ -72,7 +74,7 @@ const NavBar = () => {
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

@@ -1,5 +1,5 @@
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup"
+import { useInView } from "react-intersection-observer"
 
 const stats = [
   {
@@ -14,14 +14,13 @@ const stats = [
     num: 321,
     text: "Code Commits",
   },
-];
-
+]
 
 function StatItem({ num, text }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: .1,
-  });
+    threshold: 0.1,
+  })
 
   return (
     <div
@@ -46,7 +45,7 @@ function StatItem({ num, text }) {
         {text}
       </p>
     </div>
-  );
+  )
 }
 
 export function Stats() {
@@ -60,5 +59,5 @@ export function Stats() {
         </div>
       </div>
     </section>
-  );
+  )
 }
