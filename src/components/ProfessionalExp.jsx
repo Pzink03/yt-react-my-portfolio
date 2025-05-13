@@ -14,8 +14,8 @@ export const roadmap = [
     status: "done",
     imageUrl: qualityFirstHomePagePic,
 
-    website: "https://nelsonleetreefarmllc.com/",
-    href: "https://github.com/Pzink03/NelsonLeeTreeFarm",
+    website: "https://qualityfirstautocare.com/",
+    href: "https://github.com/Pzink03/QualityFirstAuto",
   },
   {
     id: "1",

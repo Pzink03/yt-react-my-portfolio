@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { Stats } from "./Stats"
 import { SectionTitle } from "./SectionTitle"
 
@@ -18,11 +18,11 @@ const aboutCardInfo = [
     title: "Skills",
     info: "All of my programming skills can be found here. Additionally, I have experience with Adobe Creative Cloud, including Photoshop, Premiere Pro, Illustrator, and Lightroom, as well as other design tools like Figma. I use Figma to create website mockups for clients, providing a clear visual of the design before development. Adobe apps give me greater flexibility in styling, allowing for more creative and customized design elements.",
   },
-  {
-    id: 4,
-    title: "More Info",
-    info: "This is the Additional info",
-  },
+  // {
+  //   id: 4,
+  //   title: "More Info",
+  //   info: "This is the Additional info",
+  // },
 ]
 
 const About = () => {

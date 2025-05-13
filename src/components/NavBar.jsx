@@ -47,12 +47,14 @@ const NavBar = () => {
           ))}
         </ul>
       </div>
-      <button
-        className="hidden lg:flex text-color-softBlue w-fit  hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out hover:text-white md:px-6 px-2 md:py-2 py-2 my-2 items-center rounded-lg border-2 border-color-softBlue cursor-pointer"
-        href="#contact"
-      >
-        Contact Me
-      </button>
+      <Link to="contact" smooth>
+        <button
+          className="hidden lg:flex text-color-softBlue w-fit  hover:bg-color-softBlue hover:shadow-[0_0_15px_5px] hover:shadow-color-softBlue transition-all duration-300 ease-in-out hover:text-white md:px-6 px-2 md:py-2 py-2 my-2 items-center rounded-lg border-2 border-color-softBlue cursor-pointer"
+          href="#contact"
+        >
+          Contact Me
+        </button>
+      </Link>
       <div
         onClick={toggleNavigation}
         className="cursor-pointer pr-4 z-40 text-gray-500 lg:hidden"

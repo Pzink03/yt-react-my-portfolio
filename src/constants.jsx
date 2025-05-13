@@ -18,9 +18,6 @@ import css from "./assets/icons/CSSIcon.png"
 import typescript from "./assets/icons/TypeScriptIcon.png"
 import tailwind from "./assets/icons/TailwindIcon.png"
 import react from "./assets/icons/ReactIcon.png"
-import figma from "./assets/icons/FigmaIcon.png"
-import premierPro from "./assets/icons/PremierProIcon.png"
-import photoshop from "./assets/icons/PhotoshopIcon.png"
 
 import peteTubeVid from "./assets/videos/PeteTubeVideo.mp4"
 import peteTube from "./assets/portfolio/PeteTubeImage.JPG"
@@ -523,22 +520,22 @@ export const techs = [
     title: "GitLab",
     style: "shadow-orange-400",
   },
-  {
-    id: 17,
-    src: figma,
-    title: "Figma",
-    style: "shadow-gray-400",
-  },
-  {
-    id: 18,
-    src: premierPro,
-    title: "Adobe Premier Pro",
-    style: "shadow-purple-700",
-  },
-  {
-    id: 19,
-    src: photoshop,
-    title: "Adobe Photoshop",
-    style: "shadow-blue-500",
-  },
+  // {
+  //   id: 17,
+  //   src: figma,
+  //   title: "Figma",
+  //   style: "shadow-gray-400",
+  // },
+  // {
+  //   id: 18,
+  //   src: premierPro,
+  //   title: "Adobe Premier Pro",
+  //   style: "shadow-purple-700",
+  // },
+  // {
+  //   id: 19,
+  //   src: photoshop,
+  //   title: "Adobe Photoshop",
+  //   style: "shadow-blue-500",
+  // },
 ]
